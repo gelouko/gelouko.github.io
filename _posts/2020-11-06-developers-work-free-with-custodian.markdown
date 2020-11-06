@@ -6,6 +6,18 @@ categories: aws cloud custodian guardrails security
 ---
 Check out this simple cross-account architecture to create guardrails across your organization and let your developers work without worrying about creating resources that could impact your organization.
 
+### Topics:
+
+- What is Cloud Custodian?
+- How are we going to secure our environment?
+- Architecture
+- Deploying your first policy
+- Alerting your developers!
+- Monitoring your environment
+- Cost
+- Limits
+- Wrap-up and two more adoption solutions
+
 Average reading time: 20 minutes
 
 ## What is Cloud Custodian?
