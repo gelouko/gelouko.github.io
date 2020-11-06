@@ -12,7 +12,7 @@ Average reading time: 20 minutes
 
 [Cloud Custodian](https://cloudcustodian.io/) is an open-source, CNCF sandbox project, that helps you to keep a compliant cloud environment (AWS, GCP, or Azure) by monitoring your resources and checking for compliance, applying action on them to ensure your environment is safe.
 
-You can use Cloud Custodian to avoid storage from being public, monitor your environment for exposed topics, delete unencrypted resources, and more!
+You can use Cloud Custodian to prevent storage from being public, monitor your environment for exposed topics, delete unencrypted resources, and more!
 
 You can check the [Cloud Custodian documentation](https://cloudcustodian.io/docs/index.html) for more information on the tool.
 
