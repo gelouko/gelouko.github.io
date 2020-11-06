@@ -6,13 +6,13 @@ categories: aws cloud custodian guardrails security
 ---
 Check out this simple cross-account architecture to create guardrails across your organization and let your developers work without worrying about creating resources that could impact your organization.
 
-Average reading: 15 minutes
+Average reading time: 20 minutes
 
 ## What is Cloud Custodian?
 
 [Cloud Custodian](https://cloudcustodian.io/) is an open-source, CNCF sandbox project, that helps you to keep a compliant cloud environment (AWS, GCP, or Azure) by monitoring your resources and checking for compliance, applying action on them to ensure your environment is safe.
 
-You can use Cloud Custodian to tag storage from being public, monitor your environment for exposed topics, delete unencrypted resources, and more!
+You can use Cloud Custodian to avoid storage from being public, monitor your environment for exposed topics, delete unencrypted resources, and more!
 
 You can check the [Cloud Custodian documentation](https://cloudcustodian.io/docs/index.html) for more information on the tool.
 
@@ -42,9 +42,9 @@ There will be 2 types of accounts:
   - **The Custodian Account**. This is the account where the core infrastructure will be deployed, like Lambdas and EventBridge Rules (automatically created by Cloud Custodian).
   - **The Developer Account(s)**. This is the account (or accounts) that will be monitored by Cloud Custodian alongside the Custodian Account. They need a CrossAccountRole that will perform all actions on the account's resources and an EventBridge Rule to forward the necessary events to a centralized event bus in the Custodian Account.
 
-To be able to work with Amazon EventBridge events, we have to create a CloudTrail Trail to create rules that will catch AWS Management Events. In this architecture, we have created a single Organization Trail in the Custodian Account.
+To be able to work with Amazon EventBridge events, we have to create a CloudTrail Trail to create rules that will catch AWS Management Events. In this architecture, we have created a single Organization Trail in the Master Account.
 
-When we create guardrails based on EventBridge events in Cloud Custodian, it deploys a Lambda to be triggered with the specified Cloudtrail API event name for each policy created, so keep in mind that the number of Lambdas deployed can be high considering the number of guardrails you create.
+When we create guardrails based on EventBridge events in Cloud Custodian, it deploys a Lambda to be triggered with the specified Cloudtrail API event for each policy created, so keep in mind that the number of Lambdas deployed can be high considering the number of guardrails you create.
 
 The basic flow of events for our example is the following:
 
