@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Securing your cloud environment with Cloud Custodian"
+comments: true
 date:   2020-11-06 07:00:00 -0300
 categories: aws cloud custodian guardrails security
 ---
